@@ -16,9 +16,9 @@ class Student < ActiveRecord::Base
 
   def search(search)
     @students = Student.all.find_all do |student|
-      student.name.downcase.include?(search.downcase)
+      student.name.capitalize.include?(search.capitalize)
     end
   end
-    
-  
+
+
 end
