@@ -9,14 +9,3 @@
     Hometown: <%= @student.hometown.capitalize %>
   </li>
 </ul>
-
-<%= form_for @student do |f|%>
-  <h1>Search form:</h1>
-
-  <%= f.label "Search" %>
-  <%= f.text_field :search %>
-
-  <p>
-    <%= f.submit "Search" %>
-  </p>
-<% end %>
