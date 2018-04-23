@@ -19,4 +19,5 @@ class Student < ActiveRecord::Base
     if self.empty?
       self.all
     end
+  end
 end
