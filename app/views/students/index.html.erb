@@ -1,13 +1,5 @@
-<%= render :partial => "student", locals: {student: @student} %>
-
-
-<%= form_for @student do |f|%>
-  <h1>Search form:</h1>
-
-  <%= f.label "Search" %>
-  <%= f.text_field :search %>
-
-  <p>
-    <%= f.submit "Search" %>
-  </p>
+<% @students.each do |s| %>
+  <%= render :partial => "student", locals: {student: @student} %>
 <% end %>
+
+
