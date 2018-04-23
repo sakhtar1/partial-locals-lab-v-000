@@ -14,7 +14,7 @@ class Student < ActiveRecord::Base
   has_many :classroom_students
   has_many :classrooms, through: :classroom_students
 
-  def slef.search(search)
+  def self.search(search)
     @students = Student.all.find_all do |student|
       student.name.capitalize.include?(search.capitalize)
     end
